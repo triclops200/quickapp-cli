@@ -9,3 +9,7 @@ Example Usage:
  -d"(:sdl2 :cl-opengl)" \
  --author=cluser
 ```
+#License
+Licensed under Modified BSD License.
+
+See License.txt for more details.
