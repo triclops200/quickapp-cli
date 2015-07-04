@@ -3,7 +3,7 @@ PACKAGE=quickapp-cli
 OUT=quickapp
 ENTRY=-main
 
-$(OUT): buildapp quickapp-cli.lisp quicklisp-manifest.txt
+$(OUT): buildapp *.lisp quicklisp-manifest.txt
 	./buildapp  --manifest-file quicklisp-manifest.txt \
 				--load-system asdf \
 				--eval '(push "$(ROOT_DIR)/" asdf:*central-registry*)' \
@@ -11,7 +11,7 @@ $(OUT): buildapp quickapp-cli.lisp quicklisp-manifest.txt
 				--eval '($(PACKAGE):disable-debugger)' \
 				--output $(OUT) --entry $(PACKAGE):$(ENTRY)
 
-quicklisp-manifest.txt:
+quicklisp-manifest.txt: *.asd 
 	sbcl --non-interactive \
 		--eval '(push #P"$(ROOT_DIR)/" asdf:*central-registry*)'\
 		--eval '(ql:quickload "$(PACKAGE)")'\

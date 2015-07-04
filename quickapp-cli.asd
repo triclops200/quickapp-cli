@@ -5,7 +5,7 @@
   :author "INSERT PROJECT AUTHOR HERE"
   :license "Modified BSD License"
   :serial t
-  :depends-on ()
+  :depends-on (:quickapp)
   :pathname "./"
   :components ((:file "package")
   			   (:file "quickapp-cli")))
