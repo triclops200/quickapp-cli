@@ -29,7 +29,7 @@
 					   (quickapp:generate-flag-string arg-defs)
 					   "Example Usage: " (first args) " test-project \\"
 					   "  -d\"(:sdl2 :cl-opengl)\" \\"
-					   "  --author=cluser"))
+					   "  --project-author=cluser"))
 		(let* ((fixed-args (fix-named-args parsed-args))
 			   (cmd `(quickapp:quickapp ,(caar fixed-args) ,@(cadr fixed-args))))
 		  (eval cmd)))))
