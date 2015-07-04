@@ -24,10 +24,10 @@
 		 (parsed-args (quickapp:parse-args arg-defs (cdr args))))
 	(if (or (/= (length (first parsed-args)) 1)
 			(assoc "help" (second parsed-args) :test #'string=))
-		(progn (format t "Usage: ~a PROJECT-PATH [OPTIONS]~%OPTIONS:~%~a~%~a~a~a~%~a~%~a~%"
+		(progn (format t "Usage: ~a PROJECT-PATH [OPTIONS]~%OPTIONS:~%~a~%~a~a~%~a~%~a~%~a~%"
 					   (first args)
 					   (quickapp:generate-flag-string arg-defs)
-					   "Example Usage: " (first args) "test-project \\"
+					   "Example Usage: " (first args) " test-project \\"
 					   " -d\"(:sdl2 :cl-opengl)\" \\"
 					   " --author=cluser"))
 		(let* ((fixed-args (fix-named-args parsed-args))
