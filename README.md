@@ -9,6 +9,8 @@ Example Usage:
    -d"(:sdl2 :cl-opengl)" \
    --author=cluser
 ```
+
+See https://github.com/triclops200/quickapp for more options and examples.
 #License
 Licensed under Modified BSD License.
 
